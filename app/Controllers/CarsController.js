@@ -1,4 +1,5 @@
 import { ProxyState } from "../AppState.js";
+import { carForm } from "../Models/Car.js";
 import { carsService } from "../Services/CarsService.js";
 import { loadState, saveState } from "../Utils/LocalStorage.js";
 
@@ -10,6 +11,10 @@ function _drawCars(){
   cars.forEach(c => template += c.Template)
   // console.log('drawing cars', template)
   document.getElementById('listings').innerHTML = template
+}
+
+function _drawCarsForm(){
+  document.getElementById('form').innerHTML = carForm()
 }
 
 function test(){
@@ -30,6 +35,7 @@ export class CarsController{
 
   viewCars(){
     _drawCars()
+    _drawCarsForm()
   }
 
   createCar(){
