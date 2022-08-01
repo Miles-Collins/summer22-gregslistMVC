@@ -44,8 +44,9 @@ export class HousesController{
     _drawHouses()
   }
 
-  deleteCar(id){
+  deleteHouse(id){
     console.log('deleteing', id);
-    housesService.deleteCar(id)
+    houseService.deleteHouse(id)
+    _drawHouses()
   }
 }

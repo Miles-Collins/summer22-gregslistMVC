@@ -13,7 +13,6 @@ ProxyState.houses = [...ProxyState.houses, new House(newHouse)]
 
 deleteHouse(id){
     ProxyState.houses = ProxyState.houses.filter(h => h.id != id)
-
 }
 
 }
